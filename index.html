@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk First, Not Last - The Parent's Emergency Guide to Drug Conversations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero .urgency {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+        }
+        
+        .main-content {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .problem-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+        
+        .problem-section h2 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .solution-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .solution-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .price-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .price-box {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 3px solid #e74c3c;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            font-size: 1.5rem;
+        }
+        
+        .current-price {
+            font-size: 3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .guarantee {
+            background: #27ae60;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .urgency-timer {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        .bonus-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .bonus-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .bonus-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .faq-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Talk First, Not Last</h1>
+            <p class="subtitle">The Parent's Emergency Guide to Drug Conversations That Actually Work</p>
+            
+            <div class="urgency">
+                <p><strong>STOP:</strong> Before you have "the talk" when you're panicked, angry, or caught off guard...</p>
+                <p>Get the scripts, timing, and strategies that keep your teen talking instead of shutting down.</p>
+            </div>
+            
+            <a href="#buy-now" class="cta-button">Get Your Guide Now - $47</a>
+            <p style="margin-top: 15px; opacity: 0.8;">⚡ Instant Download • 30-Day Money-Back Guarantee</p>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2>You Found Something. Now What?</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+                Every parent dreads this moment, but most handle it in ways that push their teen further away...
+            </p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>❌ The Panic Response</h3>
+                    <p>"I found vapes in your backpack! How could you do this to us?" Results in: Immediate defensive walls, lies, and relationship damage that takes months to repair.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ The Lecture Trap</h3>
+                    <p>"When I was your age..." and "Don't you know how dangerous..." Results in: Eye rolls, tuning out, and zero actual communication about what's really happening.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ The Punishment First Approach</h3>
+                    <p>"You're grounded until you're 30!" Results in: Smarter hiding, more secretive behavior, and a teen who will never come to you when they really need help.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ The Avoidance Strategy</h3>
+                    <p>"Maybe if I don't bring it up, it was just a one-time thing..." Results in: Missed opportunities, escalating problems, and regret that you didn't act when you had the chance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section">
+        <div class="container">
+            <h2>There's a Better Way</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                What if you could have conversations that actually <em>strengthen</em> your relationship with your teen?<br>
+                What if they came to <em>you</em> when they needed help?
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>The 24-Hour Rule</h3>
+                    <p>Why your first reaction determines everything and how to use your emotions as a strategic advantage.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Conversation Starters That Work</h3>
+                    <p>7 proven opening lines that keep teens talking instead of shutting down or getting defensive.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Break Through Denial</h3>
+                    <p>Scripted responses to "It's not mine," "Everyone does it," and other common teen deflections.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>2025 Drug Reality Check</h3>
+                    <p>What teens are actually using now (it's not what you think) and how to stay informed without panic.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Perfect Timing Strategies</h3>
+                    <p>When to talk, when NOT to talk, and how to create natural conversation opportunities.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Relationship Repair</h3>
+                    <p>How to rebuild trust after it's been broken and keep communication channels open long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container">
+            <h2>Real Parents, Real Results</h2>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I was about to ground my 16-year-old for a month when I found edibles in his room. Instead, I used the '24-hour rule' and the conversation starters from this guide. We ended up having the most honest conversation we've had in years. He's now coming to me with questions instead of hiding everything."</p>
+                <p class="testimonial-author">— Sarah M., Mother of 3</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"The 'partnership approach' changed everything. Instead of my daughter seeing me as the enemy, she now sees me as someone who's on her side. The scripts for handling 'It's not mine' actually worked - she told me the truth!"</p>
+                <p class="testimonial-author">— David K., Single Dad</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bonus-section">
+        <div class="container">
+            <h2>🎁 Exclusive Bonuses (Value: $197)</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px;">
+                Get everything you need to handle any situation with confidence
+            </p>
+            
+            <div class="bonus-items">
+                <div class="bonus-item">
+                    <h3>📋 Emergency Response Kit</h3>
+                    <p>Laminated quick-reference cards for crisis moments</p>
+                    <p><strong>Value: $47</strong></p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>💬 Conversation Scripts Library</h3>
+                    <p>Word-for-word templates for every scenario</p>
+                    <p><strong>Value: $67</strong></p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>📱 Modern Substance Guide</h3>
+                    <p>Visual guide to what things actually look like + current slang</p>
+                    <p><strong>Value: $37</strong></p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h3>👥 Private Parent Support Group</h3>
+                    <p>Access to exclusive Facebook community</p>
+                    <p><strong>Value: $47</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price-section" id="buy-now">
+        <div class="container">
+            <div class="price-box">
+                <h2>Everything You Need to Handle Any Drug Conversation</h2>
+                
+                <div class="urgency-timer">
+                    ⏰ LIMITED TIME: Launch Week Special
+                </div>
+                
+                <p class="original-price">Regular Price: $197</p>
+                <p class="current-price">Today Only: $47</p>
+                
+                <div class="guarantee">
+                    <h3>💯 30-Day Money-Back Guarantee</h3>
+                    <p>If this guide doesn't give you the confidence and tools to handle drug conversations better, get your money back. No questions asked.</p>
+                </div>
+                
+                <a href="https://gumroad.com/l/talk-first-not-last" class="cta-button" style="margin: 30px 0; display: block; text-align: center;">
+                    Get Instant Access Now - $47
+                </a>
+                
+                <p style="color: #7f8c8d; font-size: 0.9rem;">
+                    ✅ Instant PDF Download<br>
+                    ✅ Works on all devices<br>
+                    ✅ 30-day money-back guarantee<br>
+                    ✅ Bonus materials included
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: What if my teen has already shut down and won't talk to me?</div>
+                <div class="faq-answer">A: The guide includes specific strategies for rebuilding communication with teens who have shut down. Chapter 9 covers "repair conversations" and how to slowly rebuild trust and openness.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: Is this just for parents who have found drugs, or can I use it preventively?</div>
+                <div class="faq-answer">A: Both! The guide works whether you're having preventive conversations, addressing something you discovered, or dealing with ongoing issues. The principles and scripts adapt to any situation.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: My teen is only 13. Is this age-appropriate?</div>
+                <div class="faq-answer">A: Yes, the guide includes age-specific approaches for different developmental stages. The conversation strategies work for teens 13-18, with modifications for younger vs. older teens.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: What if my teen is using something I don't recognize?</div>
+                <div class="faq-answer">A: The Modern Substance Guide (bonus material) covers current drugs, slang terms, and warning signs. Plus, you get quarterly updates as new substances and trends emerge.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" style="padding: 40px 0;">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">Don't Wait Until It's Too Late</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                Every day you wait is another day your teen might be making decisions without your guidance.<br>
+                Get the tools you need to keep them safe and keep your relationship strong.
+            </p>
+            <a href="#buy-now" class="cta-button">Get Your Guide Now - $47</a>
+        </div>
+    </section>
+</body>
+</html>
